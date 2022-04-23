@@ -521,7 +521,8 @@ export default {
           params: {
             signature: '05e2685fc7',
             action: 'shorturl',
-            url: this.customSubUrl
+            url: this.customSubUrl,
+            format: 'json'
           }
         })
         .then(res => {
