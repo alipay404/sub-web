@@ -32,3 +32,21 @@ jobs:
           platforms: linux/amd64,linux/arm64
           push: true
           tags: kyhts/sub-web:latest
+      -
+        name: Dingtalk notification
+        uses: ghostoy/dingtalk-action@master
+        with:
+          webhook: ${{ secrets.DINGTALK_WEBHOOK}}
+          msgtype: markdown
+          content: |
+            {
+              "title": "Github Actions 通知",
+              "text": "[sub-web](https://hub.docker.com/repository/docker/kyhts/sub-web)镜像上传成功~~~"
+            }
+          at: |
+            {
+              "atMobiles": [
+                "17621231028"
+              ],
+              "isAtAll": false
+            }
