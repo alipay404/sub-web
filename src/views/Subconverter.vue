@@ -519,7 +519,7 @@ export default {
       this.$axios
         .get(shortUrlBackend, {
           params: {
-            signature: '05e2685fc7',
+            signature: 'def05e4247',
             action: 'shorturl',
             url: this.customSubUrl,
             format: 'json'
